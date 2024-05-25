@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@font-face {
+    font-family: Jersey;
+    src: url('../../assets/source/fonts/Jersey.ttf');
+}
+
+:root {
+    --primary-color: #1ba0d8;
+    --secondary-color: #1dbbff;
+    --primary-bg-color: #1b9fd8;
+    --secondary-bg-color: #a4d3e6;
+    --primary-black: #273845;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    box-shadow: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 16px !important;
+    overflow-x: hidden !important;
+}
+
+/* ------------------ Costume css Start ------------------ */
+.whole-conainer {
+    max-width: 100vw !important;
+    background-color: var(--secondary-bg-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border: 2px solid #f1f1f1;
+    border-radius: 6px;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.card {
+    border: none !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.primary-color {
+    color: var(--primary-color) !important;
+}
+
+.primary-bg {
+    background-color: var(--primary-bg-color);
+}
+
+.secondary-bg {
+    background-color: var(--secondary-bg-color);
+}
+
+/* ------------------ Costume css End ------------------ */
+
+/* ------------------ Navbar Start ------------------ */
+.navbar {
+    padding: 20px 0px !important;
+    transition: background-color 0.5s ease;
+    transition: margin 0.5s ease;
+}
+
+.navbar-on-scroll {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    width: 200px;
+    height: auto;
+}
+
+.logo-text {
+    fill: white;
+    transition: fill 0.5s ease;
+}
+
+.logo-text-on-scroll {
+    fill: var(--primary-color);
+}
+
+.navbar-toggler {
+    display: none;
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler span {
+    color: white;
+    font-size: 28px;
+    transition: color 0.5s ease;
+}
+
+.navbar-toggler-on-scroll span {
+    color: var(--primary-color);
+}
+
+.nav-link-title {
+    display: none;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item span {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.nav-item-on-scroll span {
+    background-color: var(--primary-color);
+}
+
+.nav-item:hover span,
+.nav-active span {
+    width: 100%;
+}
+
+.nav-link {
+    color: white !important;
+    transition: color 0.5s ease, opacity 0.5s ease;
+    font-family: Jersey;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 1;
+    padding: 5;
+    opacity: 0.6;
+}
+
+.nav-link-on-scroll {
+    color: var(--primary-color) !important;
+}
+
+.nav-active a {
+    opacity: 1;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: white;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-toggler {
+        display: flex;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 280px;
+        right: 0;
+        transform: translateX(280px);
+        transition: transform 0.5s ease;
+        background-color: white;
+    }
+
+    .nav-link-title {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-bottom: 1px solid var(--primary-color);
+        height: 50px;
+    }
+
+    .nav-link-title h2 {
+        color: var(--primary-color);
+        font-family: Jersey;
+    }
+
+    .navbar-nav {
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .nav-link {
+        color: var(--primary-color) !important;
+        border: 1px solid var(--primary-color) !important;
+        width: 150px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 8px;
+        font-size: 22px;
+    }
+
+    .nav-active .nav-link {
+        background-color: var(--primary-bg-color);
+        color: white !important;
+    }
+
+    .navbar-collapse-on-toggle {
+        transform: translateX(0px);
+    }
+}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 575px) {
+    .navbar {
+        padding: 10px 0px !important;
+    }
+
+    .navbar-brand {
+        width: 170px;
+    }
+}
+
+/* ------------------ Navbar End ------------------ */
+
+/* ---------------- Back to top btn css start ---------------- */
+.back-to-top {
+    display: flex;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    color: var(--primary-color);
+    font-size: 24px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.back-to-top-on-scroll {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ---------------- Back to top btn css end ---------------- */
+
+
+/* ---------------- Footer css start ---------------- */
+.footer {
+    background-color: var(--primary-color);
+}
+
+.footer-logo-holder {
+    max-width: 170px;
+    margin-bottom: 10px;
+}
+
+.footer-discription p {
+    font-size: 13px;
+    text-align: justify;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
+.footer-title {
+    font-family: Jersey;
+    font-weight: 1;
+    letter-spacing: 2px;
+}
+
+.footer-link-items {
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+.footer-link-items:hover {
+    opacity: 1;
+    color: white;
+}
+
+.footer-link-items i {
+    padding-right: 8px;
+}
+
+.footer hr {
+    border: 1px solid white;
+}
+
+.social-media i {
+    font-size: 40px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.social-media:hover i {
+    opacity: 1;
+}
+
+.copyright {
+    color: white;
+    opacity: 8;
+}
+
+.privacy-policy {
+    justify-content: end;
+}
+
+@media only screen and (max-width: 991px) {
+    .footer-discription {
+        display: none;
+    }
+
+    .footer-1 {
+        margin: auto;
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-discription {
+        display: none;
+    }
+
+    .footer-link-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sm-center-text {
+        text-align: center;
+    }
+
+    .privacy-policy {
+        justify-content: center;
+    }
+
+    .center-div {
+        justify-content: center;
+    }
+}
+
+/* ---------------- Footer css end ---------------- */
+
+/* ---------------- Page loader css start ---------------- */
+.page-loading-animation-holder {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.1s ease 0.9s, visibility 0.1s ease 0.9s;
+}
+
+.hide-page-loader {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--primary-bg-color);
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .loader {
+        margin-top: -50px;
+    }
+}
+
+/* ---------------- Page loader css end ---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body-content {
+    transition: margin 0.5s ease;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .body-content-on-toggle,
+    .navbar-on-toggle {
+        margin-right: 280px !important;
+        margin-left: -280px !important;
+    }
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------ css for pages ------------------------------------------------------------------ */
+
+/* ---------------- Index hero css start ---------------- */
+.index.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--primary-bg-color);
+}
+
+#particles-js {
+    position: absolute;
+    height: 100%;
+}
+
+.index.hero h1 {
+    font-family: Jersey;
+    font-size: 50px;
+}
+
+.index.hero h4 {
+    font-weight: 200;
+}
+
+.hero-img-holder {
+    justify-content: end;
+}
+
+.hero-img-holder img {
+    width: 90%;
+    margin-top: 60px;
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .index.hero {
+        height: auto;
+        padding-top: 60px;
+    }
+
+    .index.hero h1 {
+        text-align: center;
+    }
+
+    .index.hero h4 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero-img-holder {
+        justify-content: center;
+    }
+
+    .hero-img-holder img {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .index.hero h1 {
+        font-size: 28px;
+    }
+
+    .index.hero h4 {
+        font-size: 16px;
+    }
+
+    .hero-img-holder img {
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+/* ---------------- Index hero css end ---------------- */
+
+/* ---------------- Multi Brand Carousel css start ---------------- */
+#brand-carousel:hover {
+    transform: scale(1);
+}
+
+.brand-carousel {
+    margin-top: -20px;
+}
+
+.brand-carousel .item {
+    max-height: 40px;
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.brand-carousel .item:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------- Multi Brand Carousel css End ---------------- */
+
+/* ---------------- Content Title css start ---------------- */
+.content-title {
+    margin-top: 30px;
+}
+
+.content-title h1 {
+    text-align: center;
+    font-family: Jersey;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.content-title .d-block {
+    position: relative;
+}
+
+.content-title .d-block span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-bg-color);
+}
+
+@media only screen and (max-width: 575px) {
+    .content-title {
+        margin-top: 10px;
+    }
+}
+
+/* ---------------- Content Title css end ---------------- */
+
+/* ---------------- Feature card css start ---------------- */
+.features-cards .card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.features-cards .card:hover {
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.features-icon {
+    height: 65px;
+    width: 65px;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.features-icon i {
+    font-size: 40px;
+    color: white;
+}
+
+.features-cards h5 {
+    color: var(--primary-color);
+}
+
+.features-cards p {
+    font-size: 15px;
+}
+
+.features-cards a {
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 991px) {
+    .features-cards .card:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+}
+
+/* ---------------- Feature card css End ---------------- */
+
+
+.about-us h2 {
+    font-family: Jersey;
+    color: var(--primary-color);
+}
+
+.about-us .social-media i {
+    color: var(--primary-color);
+}
+
+
+/* ---------------- Count css start ---------------- */
+.count-area {
+   padding: 20px 0px;
+}
+
+.count-area-content {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.count-icon {
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+
+.count-digit {
+    font-size: 30px;
+    font-family: Jersey;
+}
+
+.count-title {
+    margin-top: -10px;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 991px) {
+    .count-area-content {
+        height: 140px;
+        width: 140px;
+    }
+
+    .count-icon {
+        font-size: 40px;
+        margin-bottom: -15px;
+    }
+
+    .count-digit {
+        font-size: 25px;
+    }
+
+    .count-title {
+        padding-top: 5px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .count-area-content {
+        height: 130px;
+        width: 130px;
+    }
+}
+
+/* ---------------- Count css start ---------------- */
+
+
+/* ---------------- Multi Card Carousel css start ---------------- */
+.carousel-wrap {
+    position: relative;
+}
+
+.my-team .owl-carousel {
+    position: relative;
+}
+
+.my-team .carousel-wrap .item {
+    position: relative;
+    z-index: 100;
+    cursor: grab;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    min-height: 310px;
+}
+
+.my-team .profile-image-holder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 8px;
+    background-color: var(--primary-bg-color);
+    margin: 10px 0px;
+}
+
+.my-team .profile-image-holder img {
+    border-radius: 50%;
+}
+
+.my-team .owl-nav.disabled {
+    display: flex !important;
+}
+
+.my-team .owl-nav>div {
+    margin-top: -26px;
+    position: absolute;
+    top: 50%;
+    color: var(--primary-color);
+}
+
+.my-team .owl-nav i {
+    font-size: 50px;
+}
+
+.my-team .owl-nav .owl-prev {
+    left: -40px;
+}
+
+.my-team .owl-nav .owl-next {
+    right: -40px;
+}
+
+.my-team .owl-carousel .owl-dots {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.my-team .owl-carousel .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.my-team .owl-carousel .owl-dot.active {
+    background-color: var(--primary-bg-color) !important;
+    opacity: 1 !important;
+}
+
+@media only screen and (max-width: 470px) {
+    .my-team .owl-nav.disabled {
+        display: none !important;
+    }
+
+    .my-team .owl-nav .owl-prev,
+    .my-team .owl-nav .owl-next {
+        display: none;
+    }
+}
+
+/* ---------------- Multi Card Carousel css end ---------------- */

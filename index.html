@@ -4,48 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title -->
     <title>AT SOLUTION</title>
 
-    <!-- Frontent css -->
-    <link rel="stylesheet" href="asset/css/frontent_master.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.png">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="asset/source/bootstrap/css/bootstrap.min.css">
+    <!-- Frontent master css -->
+    <link rel="stylesheet" href="assets/css/frontent_master.css">
 
-    <!-- frontent master css -->
-    <link rel="stylesheet" href="asset/css/frontent_master.css">
+    <!-- Bootstrap 5.3 css -->
+    <link rel="stylesheet" href="assets/source/bootstrap5.3/bootstrap.min.css">
 
     <!-- Font awesome css -->
-    <link rel="stylesheet" href="asset/source/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/source/font-awesome/css/font-awesome.min.css">
 
     <!-- Extra icons css -->
-    <link rel="stylesheet" href="asset/source/extra-icon/icon.css">
-
-    <!-- Index css -->
-    <link rel="stylesheet" href="asset/css/index.css">
+    <link rel="stylesheet" href="assets/source/extra-icon/icon.css">
 
     <!-- Owl carousel css -->
-    <link rel="stylesheet" href="asset/source/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/source/owl-carousel/owl.carousel.min.css">
 
     <!-- Aos css -->
-    <link rel="stylesheet" href="asset/source/aos/aos.css">
+    <link rel="stylesheet" href="assets/source/aos/aos.css">
 </head>
 
 <body>
-    <!-- Back to top btn -->
-    <button type="button" class="back-to-top" id="back-to-top-button">
-        <i class="fa fa-arrow-up"></i>
-    </button>
-    <!-- whole-container Start -->
-    <div class="whole-container">
-        <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid container-xl p-0">
+    <!-- Page loading animation start -->
+    <!-- <div class="page-loading-animation-holder">
+        <div class="d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="loader"></div>
+        </div>
+    </div> -->
+    <!-- Page loading animation end -->
+
+    <div class="whole-conainer">
+
+        <!-- Back to top btn Start -->
+        <button type="button" class="back-to-top" id="back-to-top-button">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+        <!-- Back to top btn End -->
+
+        <!-- Navbar start -->
+        <nav class="navbar navbar-expand-lg w-100 fixed-top">
+            <div class="container-fluid container-lg">
                 <a class="navbar-brand" href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
-                        viewBox="162.43 0 1899.78 309.09">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="162.43 0 1899.78 309.09">
                         <g>
                             <path
                                 d="M286.61,286.21l-11.75-58.73h-51.01l-11.75,58.73h-49.67L215.13,22.58h68.47l52.69,263.63h-49.67Zm-21.48-107.4l-15.77-78.87-15.77,78.87h31.55Z"
@@ -79,99 +82,94 @@
                             class="logo-text-outline"></path>
                     </svg>
                 </a>
-                <button class="btn navbar-toggler p-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
-                    aria-label="Toggle navigation" style="font-size: 24px;">
+                <button class="p-0 navbar-toggler" type="button" id="navbar-toggler">
                     <span class="icon-menu"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
-                    <ul class="navbar-nav">
+                <div class="navbar-collapse">
+                    <div class="nav-link-title align-items-center justify-content-center">
+                        <h2 class="text-center m-0">PAGES</h2>
+                    </div>
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item nav-active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">HOME</a>
                             <span></span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                            <span></span>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                            <span></span>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#">ABOUT</a>
                             <span></span>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Navbar End -->
-        <!-- Main content Start -->
-        <main class="main-content">
-            <div class="primary-bg" id="particles-js">
-                <div class="hero-content-holder w-100 h-100">
-                    <div class="container-fluid container-xl h-100 p-0">
-                        <div class="row m-0 h-100">
-                            <div class="col-lg-6 order-2 order-lg-1 h-100">
-                                <div class="hero-text-holder h-100 d-flex align-items-center">
-                                    <div class="d-block">
-                                        <h1>
-                                            <a href="#" class="typewrite text-white" data-period="2000"
-                                                data-type='[ "Welcome to AT Solution", "Better Solutions For Your Digital Journey"]'>
-                                                <span class="typing-line"></span>
-                                            </a>
-                                        </h1>
-                                        <h4 class="text-white" data-aos="fade-up"
-                                            data-aos-anchor-placement="bottom-bottom">
-                                            We are here to support your digital journey with innovative
-                                            solutions every
-                                            step
-                                            of the way.
-                                        </h4>
-                                    </div>
-                                </div>
+        <!-- Navbar end -->
+
+        <!-- Body Content Start -->
+        <main class="body-content mb-5">
+
+            <!-- Hero Section Start -->
+            <section class="index hero">
+                <div id="particles-js" class="w-100"></div>
+                <div class="container-lg h-100 d-flex align-items-center">
+                    <div class="row g-0">
+                        <div class="col-12 col-lg-6  order-2 order-lg-1 d-flex align-items-center">
+                            <div class="d-block">
+                                <h1>
+                                    <a href="#" class="typewrite text-white" data-period="2000"
+                                        data-type='[ "Welcome to AT Solution", "Better Solutions For Your Digital Journey"]'>
+                                        <span class="typing-line"></span>
+                                    </a>
+                                </h1>
+                                <h4 class="text-white mb-4" data-aos="fade-up" data-aos-delay="1000"
+                                    data-aos-anchor-placement="bottom-bottom">
+                                    We are here to support your digital journey with innovative solutions every step of
+                                    the way.
+                                </h4>
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2 h-100 d-flex hero-img-holder">
-                                <img src="asset/images/website/hero-img.png" data-aos="fade-left">
-                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6  order-1 order-lg-2 d-flex align-items-center hero-img-holder">
+                            <img src="assets/images/website/hero-img.png" data-aos-delay="1000" data-aos="fade-left">
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <!-- Hero Section End -->
+
+            <!-- Content start -->
             <div class="row m-0 g-5">
                 <!-- Brand carousel -->
                 <div class="col-12 p-0" data-aos="zoom-in" data-aos-duration="16000">
-                    <div class="container-fluid container-xl brand-carousel p-2">
+                    <div class="container-lg">
                         <div class="carousel-wrap">
                             <div class="owl-carousel" id="brand-carousel">
                                 <div class="item">
-                                    <img src="asset/images/logo/photoshop.png">
+                                    <img src="assets/images/logo/photoshop.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/illustrator.png">
+                                    <img src="assets/images/logo/illustrator.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/html.png">
+                                    <img src="assets/images/logo/html.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/css.png">
+                                    <img src="assets/images/logo/css.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/js.png">
+                                    <img src="assets/images/logo/js.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/jquery.png">
+                                    <img src="assets/images/logo/jquery.png">
                                 </div>
                                 <div class="item">
-                                    <img src="asset/images/logo/nodejs.png">
+                                    <img src="assets/images/logo/nodejs.png">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Title -->
-                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-delay="300">
                     <div class="content-title d-flex justify-content-center">
                         <div class="d-block">
                             <h1>Our Features</h1>
@@ -181,175 +179,217 @@
                 </div>
                 <!-- Feaatures -->
                 <div class="col-12 p-0">
-                    <div class="container-fluid container-xl p-0">
-                        <div class="row m-0 g-3">
-                            <div class="col-12 col-md-6 col-lg-3 features-cards" data-aos="fade-up"
-                                data-aos-anchor-placement="top-center" data-aos-delay="200">
-                                <div class="card ">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex justify-content-center align-items-center p-3">
-                                            <i class="fa fa-trophy"></i>
-                                        </div>
-                                        <h5 class="mb-3">Lorem ipsum</h5>
-                                        <p class="mb-3 text-secondary">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum
-                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
-                                            Maecenas sollicitudin dictum.
-                                        </p>
-                                        <a href="#"
-                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
-                                            Learn More <i class="fa fa-long-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3 features-cards" data-aos="fade-up"
-                                data-aos-anchor-placement="top-center" data-aos-delay="300">
-                                <div class="card ">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex justify-content-center align-items-center p-3">
-                                            <i class="fa fa-trophy"></i>
-                                        </div>
-                                        <h5 class="mb-3">Lorem ipsum</h5>
-                                        <p class="mb-3 text-secondary">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum
-                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
-                                            Maecenas sollicitudin dictum.
-                                        </p>
-                                        <a href="#"
-                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
-                                            Learn More <i class="fa fa-long-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3 features-cards" data-aos="fade-up"
-                                data-aos-anchor-placement="top-center" data-aos-delay="400">
-                                <div class="card ">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex justify-content-center align-items-center p-3">
-                                            <i class="fa fa-trophy"></i>
-                                        </div>
-                                        <h5 class="mb-3">Lorem ipsum</h5>
-                                        <p class="mb-3 text-secondary">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum
-                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
-                                            Maecenas sollicitudin dictum.
-                                        </p>
-                                        <a href="#"
-                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
-                                            Learn More <i class="fa fa-long-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-3 features-cards" data-aos="fade-up"
-                                data-aos-anchor-placement="top-center" data-aos-delay="500">
-                                <div class="card ">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex justify-content-center align-items-center p-3">
-                                            <i class="fa fa-trophy"></i>
-                                        </div>
-                                        <h5 class="mb-3">Lorem ipsum</h5>
-                                        <p class="mb-3 text-secondary">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum
-                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
-                                            Maecenas sollicitudin dictum.
-                                        </p>
-                                        <a href="#"
-                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
-                                            Learn More <i class="fa fa-long-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Title -->
-                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="top-center">
-                    <div class="content-title d-flex justify-content-center">
-                        <div class="d-block">
-                            <h1>About Us</h1>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-                <!-- About us -->
-                <div class="col-12 bg-light p-0">
-                    <div class="container-fluid container-xl about-us">
-                        <div class="row m-0 g-0">
-                            <div class="col-12 col-lg-6 d-flex" data-aos="fade-right" data-aos-delay="500">
-                                <div class="card flex-fill">
-                                    <img src="asset/images/website/pexels-product-school-1299359-2678468.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 d-flex" data-aos="fade-up"
-                            data-aos-anchor-placement="top-center" data-aos-delay="500">
-                                <div class="card flex-fill">
+                    <div class="container-lg">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 features-cards">
+                            <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="100">
+                                <div class="card h-100">
                                     <div class="card-body">
-                                        <h2 class="mb-3">Introduction</h2>
-                                        <p class="mb-3 text-secondary">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus
-                                            blandit massa quis hendrerit. Vestibulum faucibus vitae eros quis mattis.
-                                            Fusce quis ipsum id tortor tincidunt faucibus eget feugiat nisi. Duis nisl
-                                            sapien, eleifend sit amet convallis sed, gravida accumsan mauris. Vivamus
-                                            nulla nunc, consequat sit amet tellus ut, bibendum suscipit massa. Praesent
-                                            sit amet metus purus. Sed laoreet nec nulla vitae lobortis. Nulla ultrices
-                                            auctor velit. Aenean ligula urna, pulvinar facilisis sollicitudin sagittis,
-                                            tincidunt at diam. Quisque vestibulum, turpis at mattis bibendum, ipsum
-                                            lectus mattis nisl, nec pulvinar mi ligula non nisl. Phasellus ultrices arcu
-                                            eget faucibus tincidunt. Nunc eu finibus lacus.
+                                        <div
+                                            class="features-icon d-flex align-items-center justify-content-center mb-2">
+                                            <i class="fa fa-trophy"></i>
+                                        </div>
+                                        <h5 class="card-title text-center">Feature 1</h5>
+                                        <p class="card-text text-secondary text-justify"> Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit.
+                                            Maecenas rutrum
+                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
+                                            Maecenas sollicitudin dictum.
                                         </p>
+                                        <a href="#"
+                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
+                                            Learn More <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="200">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div
+                                            class="features-icon d-flex align-items-center justify-content-center mb-2">
+                                            <i class="fa fa-trophy"></i>
+                                        </div>
+                                        <h5 class="card-title text-center">Feature 2</h5>
+                                        <p class="card-text text-secondary text-justify"> Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit.
+                                            Maecenas rutrum
+                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
+                                            Maecenas sollicitudin dictum.
+                                        </p>
+                                        <a href="#"
+                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
+                                            Learn More <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="300">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div
+                                            class="features-icon d-flex align-items-center justify-content-center mb-2">
+                                            <i class="fa fa-trophy"></i>
+                                        </div>
+                                        <h5 class="card-title text-center">Feature 3</h5>
+                                        <p class="card-text text-secondary text-justify"> Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit.
+                                            Maecenas rutrum
+                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
+                                            Maecenas sollicitudin dictum.
+                                        </p>
+                                        <a href="#"
+                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
+                                            Learn More <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                data-aos-delay="400">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div
+                                            class="features-icon d-flex align-items-center justify-content-center mb-2">
+                                            <i class="fa fa-trophy"></i>
+                                        </div>
+                                        <h5 class="card-title text-center">Feature 4</h5>
+                                        <p class="card-text text-secondary text-justify"> Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit.
+                                            Maecenas rutrum
+                                            tellus a dolor egestas, eu venenatis risus faucibus. Nam dictum auctor ante.
+                                            Maecenas sollicitudin dictum.
+                                        </p>
+                                        <a href="#"
+                                            class="link-primary d-flex align-items-center justify-content-center gap-1">
+                                            Learn More <i class="fa fa-long-arrow-right"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <!-- Counter -->
-                <div class="col-12 p-0" data-aos="fade-right" data-aos-duration="6000">
-                    <div class="primary-bg count-area" data-diff="100">
-                        <div class="container-fluid container-xl p-0">
-                            <div class="row m-0 g-3">
-                                <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
-                                    <div class="count-area-content d-flex align-items-center justify-content-center">
+                <div class="col-12 p-0">
+                    <div class="row m-0">
+                        <div class="col-12 p-0 bg-light">
+                            <div class="row m-0 g-5 mb-5">
+                                <!-- Title -->
+                                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                    data-aos-delay="300">
+                                    <div class="content-title d-flex justify-content-center">
                                         <div class="d-block">
-                                            <div class="count-icon text-white text-center"><i class="fa fa-cube"></i>
-                                            </div>
-                                            <div class="count-digit text-white text-center">809</div>
-                                            <div class="count-title text-white text-center">PRODUCTS</div>
+                                            <h1>ABOUT US</h1>
+                                            <span></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
-                                    <div class="count-area-content d-flex align-items-center justify-content-center">
-                                        <div class="d-block">
-                                            <div class="count-icon text-white text-center"><i class="fa fa-laptop"></i>
+                                <!-- About -->
+                                <div class="col-12 p-0 about-us">
+                                    <div class="container-lg">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-lg-5" data-aos="zoom-in-right" data-aos-delay="100">
+                                                <img src="assets/images/website/pexels-product-school-1299359-2678468.jpg"
+                                                    alt="">
                                             </div>
-                                            <div class="count-digit text-white text-center">2005</div>
-                                            <div class="count-title text-white text-center">PROJECTS</div>
+                                            <div class="col-12 col-lg-7" data-aos="fade-up"
+                                                data-aos-anchor-placement="center-bottom" data-aos-delay="300">
+                                                <h2>Introduction to AT SOLUTION</h2>
+                                                <p class="mb-3 text-justify text-secondary">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                                                    luctus
+                                                    blandit massa quis hendrerit. Vestibulum faucibus vitae eros quis
+                                                    mattis.
+                                                    Fusce quis ipsum id tortor tincidunt faucibus eget feugiat nisi.
+                                                    Duis nisl
+                                                    sapien, eleifend sit amet convallis sed, gravida accumsan mauris.
+                                                    Vivamus
+                                                    nulla nunc, consequat sit amet tellus ut, bibendum suscipit massa.
+                                                    Praesent
+                                                    sit amet metus purus. Sed laoreet nec nulla vitae lobortis. Nulla
+                                                    ultrices
+                                                    auctor velit. Aenean ligula urna, pulvinar facilisis sollicitudin
+                                                    sagittis,
+                                                    tincidunt at diam. Quisque vestibulum, turpis at mattis bibendum,
+                                                    ipsum
+                                                    lectus mattis nisl, nec pulvinar mi ligula non nisl.
+                                                </p>
+                                                <div class="d-flex justify-content-center mb-2">
+                                                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                                                </div>
+                                                <div class="d-flex justify-content-center gap-3">
+                                                    <a href="https://www.facebook.com/profile.php?id=61556587933581"
+                                                        target="_blank" class="social-media"><i
+                                                            class="bi bi-facebook"></i></a>
+                                                    <a href="https://wa.me/9779812381221" target="_blank"
+                                                        class="social-media"><i class="bi bi-whatsapp"></i></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
-                                    <div class="count-area-content d-flex align-items-center justify-content-center">
-                                        <div class="d-block">
-                                            <div class="count-icon text-white text-center"><i class="fa fa-code"></i>
+                            </div>
+                        </div>
+                        <!-- Counter -->
+                        <div class="col-12 p-0 primary-bg">
+                            <div class="container-lg count-area">
+                                <div class="row gx-2 gx-lg-5 gy-lg-5 gy-2 mb-2 mb-md-5 m-0">
+                                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center"
+                                        data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                        data-aos-delay="0">
+                                        <div
+                                            class="count-area-content d-flex align-items-center justify-content-center">
+                                            <div class="d-block">
+                                                <div class="count-icon text-white text-center"><i
+                                                        class="fa fa-cube"></i>
+                                                </div>
+                                                <div class="count-digit text-white text-center">809</div>
+                                                <div class="count-title text-white text-center">PRODUCTS</div>
                                             </div>
-                                            <div class="count-digit text-white text-center">10</div>
-                                            <div class="count-title text-white text-center">DEVELOPERS</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
-                                    <div class="count-area-content d-flex align-items-center justify-content-center">
-                                        <div class="d-block">
-                                            <div class="count-icon text-white text-center"> <i class="fa fa-group"></i>
+                                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center"
+                                        data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                        data-aos-delay="100">
+                                        <div
+                                            class="count-area-content d-flex align-items-center justify-content-center">
+                                            <div class="d-block">
+                                                <div class="count-icon text-white text-center"><i
+                                                        class="fa fa-laptop"></i>
+                                                </div>
+                                                <div class="count-digit text-white text-center">2005</div>
+                                                <div class="count-title text-white text-center">PROJECTS</div>
                                             </div>
-                                            <div class="count-digit text-white text-center">30000</div>
-                                            <div class="count-title text-white text-center">CLIENTS</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center"
+                                        data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                        data-aos-delay="200">
+                                        <div
+                                            class="count-area-content d-flex align-items-center justify-content-center">
+                                            <div class="d-block">
+                                                <div class="count-icon text-white text-center"><i
+                                                        class="fa fa-code"></i>
+                                                </div>
+                                                <div class="count-digit text-white text-center">10</div>
+                                                <div class="count-title text-white text-center">DEVELOPERS</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center"
+                                        data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                                        data-aos-delay="300">
+                                        <div
+                                            class="count-area-content d-flex align-items-center justify-content-center">
+                                            <div class="d-block">
+                                                <div class="count-icon text-white text-center"> <i
+                                                        class="fa fa-group"></i>
+                                                </div>
+                                                <div class="count-digit text-white text-center">30000</div>
+                                                <div class="count-title text-white text-center">CLIENTS</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -358,7 +398,8 @@
                     </div>
                 </div>
                 <!-- Title -->
-                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                    data-aos-delay="300">
                     <div class="content-title d-flex justify-content-center">
                         <div class="d-block">
                             <h1>Our Team</h1>
@@ -366,15 +407,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 p-0" data-aos="fade-up" data-aos-anchor-placement="top-center">
-                    <div class="container-fluid container-xl my-team">
+                <!-- Team -->
+                <div class="col-12 p-0">
+                    <div class="container-lg  my-team">
                         <div class="carousel-wrap">
                             <div class="owl-carousel" id="team-owl-carousel">
-                                <div class="item card">
+                                <div class="item card" data-aos="flip-left" data-aos-delay="300">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-center">
                                             <div class="profile-image-holder">
-                                                <img src="asset/images/team/photo-1535713875002-d1d0cf377fde.jpg"
+                                                <img src="assets/images/team/photo-1535713875002-d1d0cf377fde.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -385,11 +427,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item card">
+                                <div class="item card" data-aos="flip-left" data-aos-delay="300">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-center">
                                             <div class="profile-image-holder">
-                                                <img src="asset/images/team/photo-1633332755192-727a05c4013d.jpg"
+                                                <img src="assets/images/team/photo-1633332755192-727a05c4013d.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -400,11 +442,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item card">
+                                <div class="item card" data-aos="flip-left" data-aos-delay="300">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-center">
                                             <div class="profile-image-holder">
-                                                <img src="asset/images/team/Tony_Stark_Beard_with_Quiff_Hairstyle.width-800.jpg"
+                                                <img src="assets/images/team/Tony_Stark_Beard_with_Quiff_Hairstyle.width-800.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -415,11 +457,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item card">
+                                <div class="item card" data-aos="flip-left" data-aos-delay="300">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-center">
                                             <div class="profile-image-holder">
-                                                <img src="asset/images/team/spider-man-boys-peter-Favim.com-6216316.jpg"
+                                                <img src="assets/images/team/spider-man-boys-peter-Favim.com-6216316.jpg"
                                                     alt="">
                                             </div>
                                         </div>
@@ -435,13 +477,13 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
+            <!-- Content end -->
         </main>
-        <!-- Main content Ends -->
+        <!-- Body Content End -->
+
         <!-- foother start -->
         <footer class="footer p-4">
-            <div class="container" style="padding-top: 10px;">
+            <div class="container-lgr" style="padding-top: 10px;">
                 <div class="row justify-content-end footer-1">
                     <div class="col-12 col-lg-4 p-2 footer-discription">
                         <div class="footer-logo-holder">
@@ -559,33 +601,30 @@
             </div>
         </footer>
         <!-- footer ends -->
+
     </div>
-    <!-- whole-container End -->
 </body>
 <!-- Jquery js -->
-<script src="asset/source/js/jquery.min.js"></script>
+<script src="assets/source/js/jquery.min.js"></script>
 
-<!-- Popper js -->
-<script src="asset/source/js/popper.min.js"></script>
-
-<!-- Bootstrap js -->
-<script src="asset/source/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap 5.3 bundle js -->
+<script src="assets/source/bootstrap5.3/bootstrap.bundle.min.js"></script>
 
 <!-- Frontent master js -->
-<script src="asset/js/frontent_master.js"></script>
+<script src="assets/js/frontent_master.js"></script>
 
 <!-- Particle js -->
-<script src="asset/source/particles-js/particles.js"></script>
-<script src="asset/source/particles-js/costume-particle.js"></script>
+<script src="assets/source/particles-js/particles.js"></script>
+<script src="assets/source/particles-js/costume-particle.js"></script>
 
 <!-- Jquery js -->
-<script src='asset/source/owl-carousel/jquery.min.js'></script>
+<script src='assets/source/owl-carousel/jquery.min.js'></script>
 
 <!-- Owl carousel js -->
-<script src="asset/source/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets/source/owl-carousel/owl.carousel.min.js"></script>
 
 <!-- Aos js -->
-<script src="asset/source/aos/aos.js"></script>
+<script src="assets/source/aos/aos.js"></script>
 <script>
     AOS.init();
 </script>
