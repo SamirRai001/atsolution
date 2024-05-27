@@ -46,11 +46,13 @@ btn.on('click', function (e) {
 });
 
 // ------------------------ Loading animation ------------------------
-$(window).on("load", function() {
+$(window).on("load", function () {
     $(".page-loading-animation-holder").addClass("hide-page-loader");
 })
 
 // ------------------------------------------- js for pages -------------------------------------------
+
+// ------------------------------------------- js for Index page start -------------------------------------------
 
 // ------------------------ Auto type and erease ------------------------
 var TxtType = function (el, toRotate, period) {
@@ -158,7 +160,6 @@ $(document).ready(function () {
         }
     });
 });
-
 // ------------------------ Count on scroll ------------------------
 function visible(partial) {
     var $t = partial,
@@ -203,3 +204,119 @@ $(window).scroll(function () {
         });
     }
 })
+
+// ------------------------------------------- js for Index page end -------------------------------------------
+
+// ------------------------------------------- js for Contact page start -------------------------------------------
+
+// ------------------------ weather information ------------------------
+$(document).ready(function () {
+    const apiKey = 'f01c4a8aaffa1a70c447df8cb8aedb50';
+    const cityName = 'Titahari';
+    async function fetchWeather(city) {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+        const data = await response.json();
+        return data;
+    }
+    function displayWeather(data) {
+        var celsius = data.main.temp;
+        var fahrenheit = (celsius * 9 / 5) + 32;
+        var weatherIcon = `assets/source/weather-icon/${data.weather[0].icon}.svg`;
+        var temperatureCelsius = `${celsius}`;
+        var temperatureFahrenheit = `${fahrenheit.toFixed(1)}`;
+        var humidity = `${data.main.humidity}%`;
+        var windSpeed = `${data.wind.speed}m/s`;
+        var weatherMain = `${data.weather[0].main}`;
+        var weatherDescription = `${data.weather[0].description}`;
+        $('#weatherDiscription').text(weatherDescription);
+        $('#temperatureCelsius').text(temperatureCelsius);
+        $('#temperatureFahrenheit').text(temperatureFahrenheit);
+        $('#humidity').text(humidity);
+        $('#windSpeed').text(windSpeed);
+        document.getElementById('weather-icon').src = weatherIcon;
+    }
+    fetchWeather(cityName).then(displayWeather).catch((error) => {
+    });
+})
+
+// ------------------------ Current date and time ------------------------
+$(document).ready(function () {
+    // office time
+    const officeHours = {
+        Sunday: { open: '07:00:00', close: '19:00:00' },
+        Monday: { open: '07:00:00', close: '19:00:00' },
+        Tuesday: { open: '07:00:00', close: '19:00:00' },
+        Wednesday: { open: '07:00:00', close: '19:00:00' },
+        Thursday: { open: '07:00:00', close: '19:00:00' },
+        Friday: { open: '07:00:00', close: '19:00:00' },
+        Saturday: { open: null, close: null }
+    };
+    // Current time
+    function getCurrentTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        const hours24 = String(now.getHours()).padStart(2, '0');
+        const minutes = now.getMinutes();
+        const minutes24 = String(now.getMinutes()).padStart(2, '0');
+        const seconds = now.getSeconds();
+        const seconds24 = String(now.getSeconds()).padStart(2, '0');
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        const strMinutes = minutes < 10 ? '0' + minutes : minutes;
+        const strSeconds = seconds < 10 ? '0' + seconds : seconds;
+        const timeString = hours + ':' + strMinutes + ':' + strSeconds + ' ' + ampm;
+        const currentTime24 = `${hours24}:${minutes24}:${seconds24}`;
+        $('#current-time').text(timeString);
+        return {
+            timeString: timeString,
+            currentTime24: currentTime24,
+            hours: hours,
+            minutes: strMinutes,
+            seconds: strSeconds,
+            ampm: ampm
+        };
+    }
+    //    Current date
+    function getCurrentDateAndDay() {
+        const now = new Date();
+        const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const currentDayName = dayNames[now.getDay()];
+        const dayOfMonth = now.getDate();
+        const currentMonth = now.getMonth() + 1;
+        const month = monthNames[now.getMonth()];
+        const year = now.getFullYear();
+        const dateString = `${month} ${dayOfMonth}, ${year}`;
+        const currentDate = `${currentMonth}/${dayOfMonth}/${year}`;
+        $('#current-date').text(dateString);
+        return {
+            dateString: dateString,
+            currentDate: currentDate,
+            currentDayName: currentDayName,
+            dayOfMonth: dayOfMonth,
+            month: month,
+            year: year
+        };
+    }
+
+    const currentDateAndDay = getCurrentDateAndDay();
+    const currentTime = getCurrentTime();
+    const currentDay = currentDateAndDay.currentDayName;
+
+    const todayOfficeHours = officeHours[currentDay];
+    const opening = new Date(`${currentDateAndDay.currentDate} ${todayOfficeHours.open}`).getTime();
+    const closing = new Date(`${currentDateAndDay.currentDate}  ${todayOfficeHours.close}`).getTime();
+    const current = new Date(`${currentDateAndDay.currentDate} ${currentTime.currentTime24}`).getTime();
+     
+    if (currentDateAndDay.currentDayName === 'Saturday') {
+        $('#office-status').text('Office is Closed');
+    } else if (current >= opening && current <= closing) {
+        $('#office-status').text('Office is Open');
+    } else {
+        $('#office-status').text('Office is Closed');
+    }
+})
+// ------------------------------------------- js for Contact page end ------------------------------------------
+
+
